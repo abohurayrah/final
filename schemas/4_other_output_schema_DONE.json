@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "definitions": { 
+      "vatLineItem": {
+        "type": "object",
+        "properties": {
+          "amount": { "type": "number", "description": "Amount (SAR)" },
+          "adjustmentAmount": { "type": "number", "description": "Adjustment Amount (SAR)" },
+          "vatAmount": { "type": "number", "description": "VAT Amount (SAR)" }
+        },
+        "required": ["amount", "adjustmentAmount", "vatAmount"]
+      },
+      "vatDeclaration": {
+        "type": "object",
+        "properties": {
+          "referenceNumber": { "type": "string", "description": "Declaration Reference Number" },
+          "declarationType": { "type": "string", "description": "e.g., VAT - Monthly" },
+          "periodStartDate": { "type": "string", "format": "date", "description": "Start date of the tax period" },
+          "periodEndDate": { "type": "string", "format": "date", "description": "End date of the tax period" },
+          "taxPeriod": { "type": "string", "description": "e.g., December 2023" },
+          "taxpayerInfo": {
+            "type": "object",
+            "properties": {
+              "idNumber": { "type": "string", "description": "Taxpayer ID Number" },
+              "taxAccountNumber": { "type": "string", "description": "Tax Account Number" },
+              "distinctiveNumber": { "type": "string", "description": "Distinctive Number" },
+              "taxpayerName": { "type": "string", "description": "Taxpayer Name" },
+              "address": { "type": "string", "description": "Taxpayer Address" }
+            }
+          },
+          "salesVat": {
+            "type": "object",
+            "description": "Details of VAT on Sales",
+            "properties": {
+              "standardRateSales": { "$ref": "#/definitions/vatLineItem", "description": "Sales subject to the standard rate (15%)" },
+              "stateBorneVatSales": { "$ref": "#/definitions/vatLineItem", "description": "Sales for which the State bears the VAT" },
+              "zeroRatedLocalSales": { "$ref": "#/definitions/vatLineItem", "description": "Domestic sales subject to the zero rate" },
+              "exports": { "$ref": "#/definitions/vatLineItem", "description": "Exports" },
+              "exemptSales": { "$ref": "#/definitions/vatLineItem", "description": "VAT-exempt sales" },
+              "totalSales": { "type": "number", "description": "Total Sales Amount (SAR)" },
+              "totalSalesVat": { "type": "number", "description": "Total VAT on Sales (SAR)" }
+            }
+          },
+          "purchasesVat": {
+            "type": "object",
+            "description": "Details of VAT on Purchases",
+            "properties": {
+              "standardRatePurchases": { "$ref": "#/definitions/vatLineItem", "description": "Purchases subject to the standard rate (15%)" },
+              "standardRateImportsPaidAtCustoms": { "$ref": "#/definitions/vatLineItem", "description": "Imports subject to VAT at the standard rate paid at customs" },
+              "importsSubjectToReverseCharge": { "$ref": "#/definitions/vatLineItem", "description": "Imports subject to VAT applicable under the reverse charge mechanism" },
+              "zeroRatedPurchases": { "$ref": "#/definitions/vatLineItem", "description": "Purchases subject to the zero rate" },
+              "exemptPurchases": { "$ref": "#/definitions/vatLineItem", "description": "VAT-exempt purchases" },
+              "totalPurchases": { "type": "number", "description": "Total Purchases Amount (SAR)" },
+              "totalPurchasesVat": { "type": "number", "description": "Total VAT on Purchases (SAR)" }
+            }
+          },
+          "netVatCalculation": {
+            "type": "object",
+            "description": "Calculation of Net VAT",
+            "properties": {
+              "totalVatDueForPeriod": { "type": "number", "description": "Total VAT due for the current period (SAR)" },
+              "correctionsFromPreviousPeriods": { "type": "number", "description": "Corrections from previous periods (SAR, can be +/-)" },
+              "vatCarriedForwardFromPreviousPeriods": { "type": "number", "description": "VAT carried forward from previous period(s) (SAR)" },
+              "netVatDueOrRefundable": { "type": "number", "description": "Net VAT Due (or Refundable if negative) (SAR)" }
+            }
+          },
+           "vatRefundInfo": {
+              "type": "object",
+              "description": "Information regarding VAT refunds",
+              "properties": {
+                  "isRefundable": { "type": "boolean", "description": "Indicates if the net VAT amount is refundable (negative)" },
+                  "requestRefund": { "type": "boolean", "description": "Indicates if the taxpayer opted to request a refund for the refundable amount" }
+               }
+           }
+        },
+        "required": ["referenceNumber", "periodStartDate", "periodEndDate", "taxPeriod", "taxpayerInfo", "salesVat", "purchasesVat", "netVatCalculation"]
+      }
+    },
+    "required": ["companyName", "reportedRevenue", "textPrompt", "files", "processedOutput"],
+    "properties": {
+      "companyName": { "type": "string", "description": "Company Name from input" },
+      "reportedRevenue": { "type": "number", "description": "Reported Revenue from input" },
+      "textPrompt": { 
+        "type": "string",
+        "description": "Original text prompt provided to the LLM for processing"
+      },
+      "files": {
+        "type": "object",
+        "description": "Details of the input files processed",
+        "properties": {
+          "otherDocuments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string", "description": "Filename" },
+                "type": { "type": "string", "description": "File MIME type or extension" },
+                "category": { "type": "string", "description": "User-defined category (e.g., 'VAT Statement', 'Financial Report')" }
+              },
+              "required": ["name", "type", "category"]
+            }
+          }
+        },
+        "required": ["otherDocuments"]
+      },
+      "processedOutput": {
+        "type": "object",
+        "description": "Structured output from processing the provided documents",
+        "properties": {
+          "vatDeclarations": {
+            "type": "array",
+            "description": "Array containing extracted data from each processed VAT declaration",
+            "items": {
+              "$ref": "#/definitions/vatDeclaration"
+            }
+          },
+          "otherDocumentsAnalysis": {
+             "type": "array",
+             "description": "Analysis or extracted data from other document types",
+             "items": {
+                "type": "object",
+                "properties": {
+                   "sourceFileName": {"type": "string", "description": "Name of the source file"},
+                   "documentType": {"type": "string", "description": "Type of document analyzed (e.g., 'Contract', 'Invoice')"},
+                   "analysisSummary": {"type": "string", "description": "Text summary or key extracted points"}
+                 },
+                 "required": ["sourceFileName", "documentType", "analysisSummary"],
+                 "additionalProperties": true
+             }
+          },
+          "overallSummary": {
+            "type": "string",
+            "description": "A consolidated text summary or key findings from all processed documents."
+          }
+        },
+        "required": ["overallSummary"]
+      }
+    }
+  }

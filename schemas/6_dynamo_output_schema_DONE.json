@@ -1,0 +1,194 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "final_scores": {
+        "type": "object",
+        "properties": {
+          "final_score": {
+            "type": "number",
+            "description": "Final score before adjustment"
+          },
+          "final_score_adjusted": {
+            "type": "number",
+            "description": "Final score after adjustment"
+          }
+        },
+        "required": ["final_score", "final_score_adjusted"]
+      },
+      "component_scores": {
+        "type": "object",
+        "properties": {
+          "financial_score": {
+            "type": "number",
+            "description": "Financial component score"
+          },
+          "technical_score": {
+            "type": "number",
+            "description": "Technical component score"
+          },
+          "technical_score_adjusted": {
+            "type": "number",
+            "description": "Technical component score after adjustment"
+          }
+        },
+        "required": ["financial_score", "technical_score", "technical_score_adjusted"]
+      },
+      "category_scores": {
+        "type": "object",
+        "properties": {
+          "financial_categories": {
+            "type": "object",
+            "properties": {
+              "liquidity": {
+                "type": "number",
+                "description": "Liquidity category score"
+              },
+              "profitability": {
+                "type": "number",
+                "description": "Profitability category score"
+              },
+              "activity": {
+                "type": "number",
+                "description": "Activity category score"
+              }
+            },
+            "required": ["liquidity", "profitability", "activity"]
+          },
+          "technical_categories": {
+            "type": "object",
+            "properties": {
+              "end_user": {
+                "type": "number",
+                "description": "End User category score"
+              },
+              "history": {
+                "type": "number",
+                "description": "History category score"
+              },
+              "management": {
+                "type": "number",
+                "description": "Management category score"
+              },
+              "company": {
+                "type": "number",
+                "description": "Company category score"
+              },
+              "project_list": {
+                "type": "number",
+                "description": "Project List category score"
+              },
+              "site_visits": {
+                "type": "number",
+                "description": "Site Visits category score"
+              }
+            },
+            "required": ["end_user", "history", "management", "company", "project_list", "site_visits"]
+          }
+        },
+        "required": ["financial_categories", "technical_categories"]
+      },
+      "subcategory_scores": {
+        "type": "object",
+        "properties": {
+          "financial_subcategories": {
+            "type": "object",
+            "properties": {
+              "current_ratio": {
+                "type": "number",
+                "description": "Current Ratio subcategory score"
+              },
+              "net_profit_margin": {
+                "type": "number",
+                "description": "Net Profit Margin subcategory score"
+              },
+              "gross_profit_margin": {
+                "type": "number",
+                "description": "Gross Profit Margin subcategory score"
+              },
+              "cash_conversion_cycle": {
+                "type": "number",
+                "description": "Cash Conversion Cycle subcategory score"
+              }
+            },
+            "required": ["current_ratio", "net_profit_margin", "gross_profit_margin", "cash_conversion_cycle"]
+          },
+          "technical_subcategories": {
+            "type": "object",
+            "properties": {
+              "end_user_size": {
+                "type": "number",
+                "description": "End User Size subcategory score"
+              },
+              "revenue_concentration": {
+                "type": "number",
+                "description": "Revenue Concentration subcategory score"
+              },
+              "payment_delay": {
+                "type": "number",
+                "description": "Payment Delay subcategory score"
+              },
+              "buildnow_payments": {
+                "type": "number",
+                "description": "Buildnow Payments subcategory score"
+              },
+              "simah_delinquencies": {
+                "type": "number",
+                "description": "Simah Delinquencies subcategory score"
+              },
+              "current_delinquency": {
+                "type": "number",
+                "description": "Current Delinquency subcategory score"
+              },
+              "owner_age": {
+                "type": "number",
+                "description": "Owner Age subcategory score"
+              },
+              "management_experience": {
+                "type": "number",
+                "description": "Management Experience subcategory score"
+              },
+              "years_in_business": {
+                "type": "number",
+                "description": "Years in Business subcategory score"
+              },
+              "company_age": {
+                "type": "number",
+                "description": "Company Age subcategory score"
+              },
+              "references": {
+                "type": "number",
+                "description": "References subcategory score"
+              },
+              "number_of_projects": {
+                "type": "number",
+                "description": "Number of Projects subcategory score"
+              },
+              "project_completion": {
+                "type": "number",
+                "description": "Project Completion subcategory score"
+              },
+              "site_visits": {
+                "type": "number",
+                "description": "Site Visits subcategory score"
+              }
+            },
+            "required": [
+              "end_user_size", "revenue_concentration", "payment_delay",
+              "buildnow_payments", "simah_delinquencies", "current_delinquency",
+              "owner_age", "management_experience", "years_in_business",
+              "company_age", "references", "number_of_projects",
+              "project_completion", "site_visits"
+            ]
+          }
+        },
+        "required": ["financial_subcategories", "technical_subcategories"]
+      },
+      "recommendation": {
+        "type": "string",
+        "enum": ["Accept", "Reject", "Review"],
+        "description": "Final recommendation based on the model"
+      }
+    },
+    "required": ["final_scores", "component_scores", "category_scores", "subcategory_scores", "recommendation"]
+  } 

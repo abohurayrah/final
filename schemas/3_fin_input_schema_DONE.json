@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["companyName", "reportedRevenue", "textPrompt", "files"],
+  "properties": {
+    "companyName": { "type": "string" },
+    "reportedRevenue": { "type": "number" },
+    "textPrompt": { 
+      "type": "string",
+      "description": "Text prompt to be provided to the LLM for processing"
+    },
+    "files": {
+      "type": "object",
+      "properties": {
+        "financialStatements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "type": { "const": "pdf" }
+            },
+            "required": ["name", "type"]
+          }
+        }
+      },
+      "required": ["financialStatements"]
+    }
+  }
+}

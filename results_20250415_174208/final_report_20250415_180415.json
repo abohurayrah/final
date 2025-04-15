@@ -1,0 +1,123 @@
+{
+  "final_report": {
+    "report_metadata": {
+      "report_generated_date": "2024-08-07",
+      "model_version": "1.0 - Based on Provided Analyses",
+      "overall_confidence": 0.1
+    },
+    "executive_summary": {
+      "company_name": "Information Not Found",
+      "loan_request": {
+        "amount_sar": 1500000,
+        "term_months": 6,
+        "purpose": "Working Capital"
+      },
+      "recommendation": "Reject",
+      "key_strengths": [
+        "None identified due to complete lack of supporting data."
+      ],
+      "key_risks": [
+        "Complete absence of required documentation (Bank Statements, Financial Statements, VAT Returns, etc.).",
+        "Inability to assess financial health, profitability, or cash flow.",
+        "Inability to assess business stability, operations, or revenue streams.",
+        "Inability to verify repayment capacity.",
+        "Unknown compliance status."
+      ],
+      "summary_rationale": "The recommendation to Reject is based strictly on the provided input, which contained no document analyses (bank statements, financial statements, VAT returns, contracts, etc.). Consequently, there is zero verifiable information upon which to base an approval or conduct a meaningful risk assessment. Key financial metrics, cash flow data, business stability indicators, repayment capacity, and compliance checks could not be performed. The application lacks the fundamental information required for due diligence."
+    },
+    "company_profile": {
+      "legal_name": "Information Not Found",
+      "cr_number": null,
+      "establishment_year": null,
+      "business_description": "Information Not Found",
+      "key_activities": [],
+      "ownership_structure": []
+    },
+    "financial_overview": {
+      "revenue_trend": "Information Not Found - No financial statements or bank statements provided.",
+      "profitability": "Information Not Found - No financial statements provided.",
+      "balance_sheet_summary": "Information Not Found - No balance sheet provided.",
+      "key_ratios": {
+        "current_ratio": null,
+        "debt_to_equity": null,
+        "return_on_assets": null,
+        "return_on_equity": null
+      }
+    },
+    "cash_flow_assessment": {
+      "monthly_cash_flow_pattern": "Information Not Found - No bank statements provided.",
+      "cash_flow_stability": "Information Not Found - No bank statements provided.",
+      "owner_drawing_patterns": "Information Not Found - No bank statements provided.",
+      "revenue_verification": "Information Not Found / Not Verifiable - No bank statements or VAT returns provided."
+    },
+    "compliance_status": {
+      "regulatory_compliance": "Information Not Found - No company documents or relevant checks possible.",
+      "tax_compliance": "Information Not Found - No VAT returns or tax documents provided.",
+      "documentation_completeness": "Critically Incomplete - No core documents provided or analyzed."
+    },
+    "business_assessment": {
+      "operational_maturity": "Information Not Found - No operational history or company details provided.",
+      "market_position": "Information Not Found - No market context or competitive information provided.",
+      "client_relationships": "Information Not Found - No contracts, POs, or client details provided.",
+      "business_outlook": "Information Not Found - Cannot be assessed due to lack of data."
+    },
+    "repayment_capacity": {
+      "monthly_payment_estimate_sar": null,
+      "cash_flow_coverage_ratio": null,
+      "profit_coverage_ratio": null,
+      "repayment_source_reliability": "Unknown / Cannot be Assessed - No cash flow or revenue data available.",
+      "overall_capacity_assessment": "Cannot be Assessed / Assumed Very Low - Lack of financial data prevents any assessment."
+    },
+    "risk_assessment": {
+      "financial_risks": [
+        "Unable to assess financial health, profitability, cash flow, or repayment capacity due to missing data."
+      ],
+      "operational_risks": [
+        "Unable to assess business stability, operational history, or revenue streams due to missing data."
+      ],
+      "compliance_risks": [
+        "Complete lack of submitted document analyses (Bank Statements, Financial Statements, VAT, Contracts, Other). No basis for assessment.",
+        "Unknown regulatory and tax compliance status."
+      ],
+      "market_risks": [
+        "Market position and resilience unknown due to lack of data."
+      ],
+      "overall_risk_level": "High / Unknown"
+    },
+    "decision_recommendation": {
+      "decision": "Reject",
+      "justification": "Decision is based strictly on the provided input, which contained no document analyses. There is zero information upon which to base an approval. Key financial metrics, cash flow data, business stability indicators, and compliance checks could not be performed. The scoring model could not be applied due to the complete absence of input data.",
+      "conditions": [],
+      "additional_information_needed": [
+        "Bank Statement Analysis",
+        "Financial Statement Analysis (Balance Sheet, Income Statement, Cash Flow Statement)",
+        "VAT Return Analysis",
+        "Contract Analysis (if applicable)",
+        "Company Profile / Registration Documents",
+        "Any other relevant supporting documents"
+      ]
+    },
+    "appendices": {
+      "documents_analyzed": [
+        "No documents were provided for analysis."
+      ],
+      "key_findings_by_document_type": {
+        "bank_statements": [
+          "No bank statements provided or analyzed."
+        ],
+        "financial_statements": [
+          "No financial statements provided or analyzed."
+        ],
+        "vat_returns": [
+          "No VAT returns provided or analyzed."
+        ],
+        "contracts_and_pos": [
+          "No contracts or POs provided or analyzed."
+        ],
+        "other_documents": [
+          "No other relevant documents provided or analyzed."
+        ]
+      }
+    }
+  }
+}

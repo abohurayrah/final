@@ -1,0 +1,99 @@
+{
+  "decision_dynamo_output": {
+    "request_summary": {
+      "loan_amount_sar": 1500000,
+      "loan_term_months": 6,
+      "loan_purpose": "Working Capital"
+    },
+    "company_summary": {
+      "company_name": "Information Not Found",
+      "business_description": "Information Not Found",
+      "years_in_operation": null,
+      "key_business_indicators": {
+        "annual_revenue_sar": null,
+        "net_profit_sar": null,
+        "monthly_cash_flow_sar": null
+      }
+    },
+    "analysis_summaries": {
+      "bank_statement_summary": "No bank statement analysis provided.",
+      "financial_statement_summary": "No financial statement analysis provided.",
+      "vat_analysis_summary": "No VAT analysis provided.",
+      "contract_analysis_summary": "No contract analysis provided.",
+      "other_documents_summary": "No other document analyses provided."
+    },
+    "scoring": {
+      "financial_health_score": null,
+      "cash_flow_score": null,
+      "repayment_capacity_score": null,
+      "business_stability_score": null,
+      "compliance_score": null,
+      "documentation_completeness_score": 0,
+      "final_score_adjusted": null
+    },
+    "risk_assessment": {
+      "key_risk_factors": [
+        {
+          "risk_category": "Documentation",
+          "risk_description": "Complete lack of submitted document analyses (Bank Statements, Financial Statements, VAT, Contracts, Other). No basis for assessment.",
+          "severity": "Critical",
+          "mitigation_suggestion": "Submit all required document analyses for review."
+        },
+        {
+          "risk_category": "Financial",
+          "risk_description": "Unable to assess financial health, profitability, cash flow, or repayment capacity due to missing data.",
+          "severity": "Critical",
+          "mitigation_suggestion": "Provide comprehensive financial documentation and bank statements."
+        },
+        {
+          "risk_category": "Business",
+          "risk_description": "Unable to assess business stability, operational history, or revenue streams due to missing data.",
+          "severity": "Critical",
+          "mitigation_suggestion": "Provide company registration, operational details, and relevant contracts/references."
+        }
+      ],
+      "overall_risk_level": "High / Unknown"
+    },
+    "repayment_analysis": {
+      "monthly_payment_estimate_sar": null,
+      "cash_flow_coverage_ratio": null,
+      "profit_coverage_ratio": null,
+      "repayment_probability": "Unknown / Very Low"
+    },
+    "recommendation": {
+      "decision": "Reject",
+      "confidence_level": "Very Low",
+      "justification": "Decision is based strictly on the provided input, which contained no document analyses. There is zero information upon which to base an approval. Key financial metrics, cash flow data, business stability indicators, and compliance checks could not be performed. The scoring model could not be applied due to the complete absence of input data.",
+      "conditional_requirements": [],
+      "additional_information_needed": [
+        "Bank Statement Analysis",
+        "Financial Statement Analysis (Balance Sheet, Income Statement, Cash Flow Statement)",
+        "VAT Return Analysis",
+        "Contract Analysis (if applicable)",
+        "Company Profile / Registration Documents",
+        "Any other relevant supporting documents"
+      ]
+    },
+    "sensitivity_analysis": {
+      "critical_factors": [
+        "Availability of any financial data",
+        "Availability of any operational data",
+        "Availability of any compliance data"
+      ],
+      "scenario_outcomes": [
+        {
+          "scenario": "No information provided (Current State)",
+          "outcome": "Rejection due to inability to assess risk or repayment capacity."
+        },
+        {
+          "scenario": "Partial information provided",
+          "outcome": "Likely Review or Rejection depending on the specific data provided and identified gaps/risks. Confidence would remain low to moderate."
+        },
+        {
+          "scenario": "Complete information provided",
+          "outcome": "Full assessment possible, leading to a decision (Accept/Reject/Review) with higher confidence based on calculated scores and risk factors."
+        }
+      ]
+    }
+  }
+}

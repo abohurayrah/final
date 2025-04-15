@@ -1,0 +1,73 @@
+{
+  "classified_documents": [
+    {
+      "original_filename": "aa.pdf",
+      "document_type": "Financial Statement",
+      "status": "Positive",
+      "metadata": {
+        "financial_years": [
+          "2024",
+          "2023"
+        ],
+        "audit_status": "Audited (implied)"
+      }
+    },
+    {
+      "original_filename": "ab.pdf",
+      "document_type": "Financial Statement",
+      "status": "Positive",
+      "metadata": {
+        "company_name": "\u0634\u0631\u0643\u0629 \u0625\u062a\u0645\u0627\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0639\u0642\u0627\u0631\u064a",
+        "financial_years": [
+          "2023",
+          "2022"
+        ],
+        "audit_status": "Audited"
+      }
+    },
+    {
+      "original_filename": "ac.pdf",
+      "document_type": "Project Contract",
+      "status": "Positive",
+      "metadata": {
+        "contract_parties": [
+          "\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0648\u0627\u0644\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629",
+          "\u0634\u0631\u0643\u0629 \u0625\u062a\u0645\u0627\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0639\u0642\u0627\u0631\u064a"
+        ],
+        "contract_date": "2023-11-16",
+        "project_scope_brief": "Construction of Residential Tower (4 basements + Ground + 25 typical floors + Annex) in Al Sahafa, Riyadh",
+        "other_info": "Contract Value SAR 33,482,700.00"
+      }
+    },
+    {
+      "original_filename": "ae.pdf",
+      "document_type": "VAT Statement",
+      "status": "Positive",
+      "metadata": {
+        "company_name": "\u0634\u0640\u0631\u0643\u0629 \u0625\u0645\u062a\u0627\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0639\u0642\u0627\u0631\u064a",
+        "tax_periods": [
+          "Dec 2023",
+          "Nov 2023",
+          "Oct 2023",
+          "Sep 2023",
+          "Aug 2023",
+          "Jul 2023",
+          "Jun 2023",
+          "May 2023",
+          "Apr 2023",
+          "Mar 2023"
+        ],
+        "other_info": "Tax Account Number 310200755500003"
+      }
+    }
+  ],
+  "missing_requirements": [
+    "Bank Statement (Year 2024)",
+    "Bank Statement (Jan-Apr 2025)",
+    "Project List",
+    "GOSI (Current)",
+    "Saudization Certificate (Current)",
+    "CR (Current)",
+    "Company Profile"
+  ]
+}

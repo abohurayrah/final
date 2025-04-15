@@ -1,0 +1,121 @@
+{
+  "decision_dynamo_output": {
+    "request_summary": {
+      "loan_amount_sar": 1500000,
+      "loan_term_months": 6,
+      "loan_purpose": "Working Capital"
+    },
+    "company_summary": {
+      "company_name": "\u0634\u0631\u0643\u0629 \u0625\u062a\u0645\u0627\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0639\u0642\u0627\u0631\u064a (Identified from VAT/Contract Analysis)",
+      "business_description": "Contractor (Inferred from Contract Analysis: Main Contractor Agreement)",
+      "years_in_operation": null,
+      "key_business_indicators": {
+        "annual_revenue_sar": 189466054,
+        "net_profit_sar": 52559696,
+        "monthly_cash_flow_sar": null
+      }
+    },
+    "analysis_summaries": {
+      "bank_statement_summary": "Information Not Found. Bank statement analysis was not provided.",
+      "financial_statement_summary": "Financial statements (FY24 unaudited, FY23 audited) show strong revenue growth (14.6% in FY24) and high profitability (Net Margin 27.7% in FY24). However, significant concerns exist: critically low cash balance (SAR 0.53m), historical negative operating cash flows (FY23, FY22 data), a very large 'Due from related parties' balance (SAR 65.8m, 42% of assets), and a substantial increase in short-term debt. Liquidity ratios appear adequate (Current Ratio 2.41) but are heavily reliant on receivables. Leverage increased but remains moderate (D/E 0.53). FY24 Cash Flow Statement and Auditor's Report are missing. [Source: financialAnalysisOutput]",
+      "vat_analysis_summary": "VAT returns (Jan 2023 - Dec 2024) show consistent monthly filing but highly volatile reported sales and purchases, including a zero sales month (Aug 2024). Average monthly sales were SAR 11.0m. Frequent VAT credit positions were noted. Payment status for VAT due is unconfirmed ('Information Not Found'). Overall compliance rated Moderate due to volatility and lack of payment proof. [Source: vatAnalysisOutput]",
+      "contract_analysis_summary": "Analysis of one Main Contractor Agreement (SAR 33.5m, 24 months with Al Awaly Real Estate) indicates the loan purpose aligns with working capital needs arising from payment terms (20% advance, monthly progress payments less 10% retention). Retention poses significant cash flow pressure. Based solely on this contract, there is high customer concentration. Repayment seems feasible from contract cash flows assuming timely execution and payments, but inherent construction risks exist. [Source: contractAnalysisOutput]",
+      "other_documents_summary": "No other document analyses were provided. [Source: otherDocumentsOutput]"
+    },
+    "scoring": {
+      "financial_health_score": 70,
+      "cash_flow_score": 25,
+      "repayment_capacity_score": 40,
+      "business_stability_score": 55,
+      "compliance_score": 50,
+      "documentation_completeness_score": 40,
+      "final_score_adjusted": 45
+    },
+    "risk_assessment": {
+      "key_risk_factors": [
+        {
+          "risk_category": "Liquidity",
+          "risk_description": "Critically low cash balance (SAR 0.53m) and historical negative operating cash flows (FY22, FY23) indicate severe difficulty converting profit to cash. [Source: financialAnalysisOutput]",
+          "severity": "High",
+          "mitigation_suggestion": "Obtain recent bank statements to assess current cash flow, secure confirmed payment schedules for major receivables."
+        },
+        {
+          "risk_category": "Credit Risk",
+          "risk_description": "Heavy reliance on receivables collection, particularly a large SAR 65.8m balance due from related parties. [Source: financialAnalysisOutput]",
+          "severity": "High",
+          "mitigation_suggestion": "Obtain details and aging for related party receivables, assess collectability, potentially seek guarantees or assignments."
+        },
+        {
+          "risk_category": "Documentation",
+          "risk_description": "Missing critical documents: Bank Statements, FY2024 Cash Flow Statement, FY2024 Auditor's Report. [Source: financialAnalysisOutput]",
+          "severity": "High",
+          "mitigation_suggestion": "Request submission of all missing documents before proceeding."
+        },
+        {
+          "risk_category": "Compliance",
+          "risk_description": "VAT reporting shows high volatility, a zero sales month, and unverified payment status for periods where VAT was due. [Source: vatAnalysisOutput]",
+          "severity": "Medium",
+          "mitigation_suggestion": "Request explanation for volatility/zero sales month and proof of VAT payments."
+        },
+        {
+          "risk_category": "Concentration Risk",
+          "risk_description": "High customer concentration (100% based on single analyzed contract). [Source: contractAnalysisOutput]",
+          "severity": "Medium",
+          "mitigation_suggestion": "Inquire about other ongoing contracts or revenue sources."
+        },
+        {
+          "risk_category": "Operational Risk",
+          "risk_description": "Contract analysis highlights cash flow pressure from 10% retention and standard construction project risks (delays, cost overruns). [Source: contractAnalysisOutput]",
+          "severity": "Medium",
+          "mitigation_suggestion": "Assess project management capabilities and contingency planning."
+        }
+      ],
+      "overall_risk_level": "High"
+    },
+    "repayment_analysis": {
+      "monthly_payment_estimate_sar": 257000,
+      "cash_flow_coverage_ratio": null,
+      "profit_coverage_ratio": 17.2,
+      "repayment_probability": "Low to Moderate"
+    },
+    "recommendation": {
+      "decision": "Review",
+      "confidence_level": "Medium",
+      "justification": "The company demonstrates strong profitability and revenue growth according to financial statements. However, this is severely undermined by critical red flags: extremely poor historical cash conversion leading to a critically low cash balance, heavy reliance on collecting large receivables (especially from related parties), significant documentation gaps (missing Bank Statements, FY24 Cash Flow, FY24 Audit), and volatile VAT reporting. The high profit-based repayment capacity (17.2x coverage) is unreliable given the demonstrated inability to generate positive cash flow. Repayment within the short 6-month term is highly uncertain and dependent on rapid, unproven cash collection. The loan purpose aligns with working capital needs identified in the contract analysis, but the underlying ability to service debt from operational cash flow is questionable based on available data.",
+      "conditional_requirements": [
+        "Submission of Bank Statements for the last 12 months.",
+        "Submission of the complete FY2024 Financial Statements, including Cash Flow Statement.",
+        "Submission of the Auditor's Report for FY2024 Financial Statements (Unqualified Opinion preferred).",
+        "Submission of proof of payment for all historical VAT liabilities.",
+        "Detailed aging report and collection plan/evidence for Accounts Receivable, specifically addressing the SAR 65.8m due from related parties."
+      ],
+      "additional_information_needed": [
+        "Explanation for the high volatility in monthly VAT sales/purchases and the zero sales month reported (Aug 2024).",
+        "Details regarding the nature and terms of the 'Due from related parties' balance.",
+        "Confirmation of the company's years in operation and management team experience.",
+        "Information on other active contracts or revenue streams to assess concentration risk accurately."
+      ]
+    },
+    "sensitivity_analysis": {
+      "critical_factors": [
+        "Timing and amount of Accounts Receivable collections (especially related party)",
+        "Actual Operating Cash Flow generation in H1 2025",
+        "Timeliness of payments received under the analyzed contract"
+      ],
+      "scenario_outcomes": [
+        {
+          "scenario": "Significant delay (> 3 months) in collecting major receivables or receiving contract payments.",
+          "outcome": "High probability of default due to inability to meet operational expenses and loan repayments from cash flow."
+        },
+        {
+          "scenario": "Successful collection of > SAR 10 million in receivables (non-related party) within the first 3 months.",
+          "outcome": "Improved liquidity position, potentially increasing repayment probability to Moderate, but underlying cash conversion issues remain."
+        },
+        {
+          "scenario": "Related party receivable proves to be long-term or uncollectible.",
+          "outcome": "Significant impairment to asset quality and liquidity, likely leading to default on short-term obligations including this loan."
+        }
+      ]
+    }
+  }
+}

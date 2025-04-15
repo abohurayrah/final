@@ -1,0 +1,366 @@
+{
+  "vat_analysis": {
+    "overview": {
+      "company_name": "\u0634\u0631\u0643\u0629 \u0625\u062a\u0645\u0627\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0639\u0642\u0627\u0631\u064a",
+      "tax_identification_number": "\u0663\u0661\u0660\u0662\u0660\u0660\u0667\u0665\u0665\u0665\u0660\u0660\u0660\u0660\u0663",
+      "document_sources": [
+        "ae.pdf"
+      ]
+    },
+    "vat_returns_summary": [
+      {
+        "period": "Jan 2023 (2023/01/01 - 2023/01/31)",
+        "reported_sales_sar": 11697833.73,
+        "reported_purchases_sar": 9418706.06,
+        "net_vat_sar": 120268.61,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Feb 2023 (2023/02/01 - 2023/02/28)",
+        "reported_sales_sar": 12310716.2,
+        "reported_purchases_sar": 11942801.82,
+        "net_vat_sar": 55187.16,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Mar 2023 (2023/03/01 - 2023/03/31)",
+        "reported_sales_sar": 10536610.93,
+        "reported_purchases_sar": 10621189.33,
+        "net_vat_sar": -12686.76,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Apr 2023 (2023/04/01 - 2023/04/30)",
+        "reported_sales_sar": 6397095.99,
+        "reported_purchases_sar": 6080639.06,
+        "net_vat_sar": 34781.78,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "May 2023 (2023/05/01 - 2023/05/31)",
+        "reported_sales_sar": 7042956.93,
+        "reported_purchases_sar": 9529692.2,
+        "net_vat_sar": -373010.29,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Jun 2023 (2023/06/01 - 2023/06/30)",
+        "reported_sales_sar": 4777666.33,
+        "reported_purchases_sar": 6979293.19,
+        "net_vat_sar": -703254.32,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Jul 2023 (2023/07/01 - 2023/07/31)",
+        "reported_sales_sar": 9018078.73,
+        "reported_purchases_sar": 8774362.27,
+        "net_vat_sar": -666696.85,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Aug 2023 (2023/08/01 - 2023/08/31)",
+        "reported_sales_sar": 5780309.86,
+        "reported_purchases_sar": 6045737.93,
+        "net_vat_sar": -706511.06,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Sep 2023 (2023/09/01 - 2023/09/30)",
+        "reported_sales_sar": 5543023.47,
+        "reported_purchases_sar": 12095579.47,
+        "net_vat_sar": -1689394.46,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Oct 2023 (2023/10/01 - 2023/10/31)",
+        "reported_sales_sar": 17130626.87,
+        "reported_purchases_sar": 10944026.2,
+        "net_vat_sar": -761404.36,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Nov 2023 (2023/11/01 - 2023/11/30)",
+        "reported_sales_sar": 11728713.8,
+        "reported_purchases_sar": 8409908.67,
+        "net_vat_sar": -263583.59,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Dec 2023 (2023/12/01 - 2023/12/31)",
+        "reported_sales_sar": 17094011.4,
+        "reported_purchases_sar": 15170089.8,
+        "net_vat_sar": 25004.65,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Jan 2024 (2024/01/01 - 2024/01/31)",
+        "reported_sales_sar": 1753060.0,
+        "reported_purchases_sar": 5998792.73,
+        "net_vat_sar": -636859.91,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Feb 2024 (2024/02/01 - 2024/02/29)",
+        "reported_sales_sar": 13508625.0,
+        "reported_purchases_sar": 8827691.07,
+        "net_vat_sar": 65280.18,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Mar 2024 (2024/03/01 - 2024/03/31)",
+        "reported_sales_sar": 15081815.4,
+        "reported_purchases_sar": 14522743.1,
+        "net_vat_sar": 83860.84,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Apr 2024 (2024/04/01 - 2024/04/30)",
+        "reported_sales_sar": 11864567.27,
+        "reported_purchases_sar": 11466973.4,
+        "net_vat_sar": 59639.08,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "May 2024 (2024/05/01 - 2024/05/31)",
+        "reported_sales_sar": 20403894.73,
+        "reported_purchases_sar": 20194006.6,
+        "net_vat_sar": 31483.22,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Jun 2024 (2024/06/01 - 2024/06/30)",
+        "reported_sales_sar": 16331443.47,
+        "reported_purchases_sar": 15945234.54,
+        "net_vat_sar": 57931.34,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Jul 2024 (2024/07/01 - 2024/07/31)",
+        "reported_sales_sar": 10102326.33,
+        "reported_purchases_sar": 9671328.66,
+        "net_vat_sar": 64649.65,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Aug 2024 (2024/08/01 - 2024/08/31)",
+        "reported_sales_sar": 0.0,
+        "reported_purchases_sar": 9453796.87,
+        "net_vat_sar": -1418069.53,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Sep 2024 (2024/09/01 - 2024/09/30)",
+        "reported_sales_sar": 10401264.2,
+        "reported_purchases_sar": 6277510.67,
+        "net_vat_sar": -799506.5,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Oct 2024 (2024/10/01 - 2024/10/31)",
+        "reported_sales_sar": 15863854.87,
+        "reported_purchases_sar": 10481584.4,
+        "net_vat_sar": 7834.07,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Nov 2024 (2024/11/01 - 2024/11/30)",
+        "reported_sales_sar": 9807853.0,
+        "reported_purchases_sar": 9619278.73,
+        "net_vat_sar": 28286.14,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      },
+      {
+        "period": "Dec 2024 (2024/12/01 - 2024/12/31)",
+        "reported_sales_sar": 39529249.58,
+        "reported_purchases_sar": 39090995.3,
+        "net_vat_sar": 65738.14,
+        "payment_status": "Information Not Found",
+        "bank_payment_match": {
+          "match_status": "Information Not Found",
+          "payment_amount_sar": null,
+          "payment_date": null,
+          "bank_reference": null
+        }
+      }
+    ],
+    "sales_analysis": {
+      "avg_monthly_sales_sar": 10995539.09,
+      "sales_trend": "Highly Variable - Significant month-to-month fluctuations without a clear overall trend across the 24 months. [Source: Calculation based on ae.pdf, Sales figures]",
+      "sales_consistency": "Low - Characterized by substantial volatility, including a zero sales month (Aug 2024) and large peaks (e.g., Dec 2024). [Source: Calculation based on ae.pdf, Sales figures]",
+      "seasonal_patterns": "Not clearly discernible from the provided 24 months of data. Requires further analysis or context. [Source: Observation based on ae.pdf]"
+    },
+    "purchases_analysis": {
+      "avg_monthly_purchases_sar": 11165032.01,
+      "purchases_trend": "Highly Variable - Significant month-to-month fluctuations similar to sales. [Source: Calculation based on ae.pdf, Purchases figures]",
+      "purchases_consistency": "Low - Significant volatility observed throughout the 24-month period. [Source: Calculation based on ae.pdf, Purchases figures]",
+      "purchases_to_sales_ratio": 1.015
+    },
+    "compliance_assessment": {
+      "filing_consistency": "Consistent - Returns provided for 24 consecutive months (Jan 2023 - Dec 2024). [Source: Observation based on ae.pdf]",
+      "payment_consistency": "Information Not Found - VAT returns do not confirm payment status.",
+      "filing_gaps": [],
+      "unusual_patterns": [
+        "Significant volatility in monthly sales and purchases.",
+        "Zero sales reported in Aug 2024 [Source: ae.pdf, Page 59].",
+        "Frequent negative Net VAT (credit/refundable position) reported, particularly in 2023 and specific months in 2024 (Jan, Aug, Sep). [Source: Observation based on ae.pdf]",
+        "One amended return filed for Apr 2023 [Source: ae.pdf, Page 25]."
+      ],
+      "overall_compliance_rating": "Moderate - Filing appears consistent for the period, but volatility, zero sales month, frequent credit positions, and lack of payment proof require attention."
+    },
+    "cross_validation": {
+      "vat_returns_vs_bank_statements": "Information Not Found - Bank statements not provided.",
+      "vat_returns_vs_financial_statements": "Information Not Found - Financial statements not provided.",
+      "consistency_assessment": "Low consistency in reported monthly sales and purchase volumes based solely on VAT returns. Filing frequency appears consistent."
+    },
+    "risks_and_strengths": {
+      "tax_compliance_strengths": [
+        "Consistent monthly VAT filing observed for the 24-month period (Jan 2023 - Dec 2024). [Source: Observation based on ae.pdf]"
+      ],
+      "tax_compliance_risks": [
+        "High volatility in reported sales/purchases, including a zero sales month (Aug 2024), impacting revenue predictability. [Source: Calculation based on ae.pdf]",
+        "Frequent VAT credit positions may indicate operational factors (e.g., high input costs relative to taxable sales, large projects) requiring clarification. [Source: Observation based on ae.pdf]",
+        "Absence of evidence for timely VAT payments for periods with tax due. [Source: Information Not Found]",
+        "History of amended return (Apr 2023) suggests potential for past reporting inaccuracies. [Source: ae.pdf, Page 25]"
+      ],
+      "risk_level": "Moderate"
+    }
+  }
+}

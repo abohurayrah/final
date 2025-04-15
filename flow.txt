@@ -1,0 +1,43 @@
+## 1. File Upload & Classification
+
+- User uploads financial documents
+- System automatically classifies by type (bank statements, financial statements, tax returns, etc.)
+- System identifies missing documents and notifies user
+
+## 2. Individual Analysis by Document Type
+
+- Each document type gets specialized analysis:
+    - Bank statement analysis
+    - Financial statement analysis
+    - Tax document analysis
+    - Other document types as needed
+- Analysis results are stored in a structured database for retrieval
+
+## 3. Decision Dynamo Scoring
+
+- All individual analyses are fed into Decision Dynamo engine
+- System generates comprehensive score based on all available data
+- Score includes breakdown of key factors
+
+## 4. Decision Report Generation
+
+- Complete report combines:
+    - Individual document analyses
+    - Decision Dynamo score
+    - Recommended decision with rationale
+    - Risk factors and considerations
+
+## 5. Update & Change Management
+
+- Users can upload additional documents at any time
+- System reruns analysis with new information
+- Generates changelog showing how new documents impact:
+    - Individual analyses
+    - Overall score
+    - Final recommendation
+
+## 6. Interactive Query Interface
+
+- Users can ask specific questions about the analyses
+- System provides contextual answers based on all document data
+- Analysis history is preserved for reference

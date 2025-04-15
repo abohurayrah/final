@@ -1,0 +1,778 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["companyName", "reportedRevenue", "financialAnalysis", "creditAssessment", "metadata"],
+  "properties": {
+    "companyName": { 
+      "type": "string",
+      "description": "Name of the company being analyzed"
+    },
+    "reportedRevenue": { 
+      "type": "number",
+      "description": "Annual revenue reported by the company in SAR"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["analysisDate", "statementsAnalyzed", "periodCovered", "confidenceScore"],
+      "properties": {
+        "analysisDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when the analysis was performed"
+        },
+        "statementsAnalyzed": {
+          "type": "integer",
+          "description": "Number of financial statements analyzed"
+        },
+        "periodCovered": {
+          "type": "object",
+          "required": ["startDate", "endDate", "totalMonths"],
+          "properties": {
+            "startDate": {
+              "type": "string",
+              "format": "date",
+              "description": "Start date of the analyzed period"
+            },
+            "endDate": {
+              "type": "string",
+              "format": "date",
+              "description": "End date of the analyzed period"
+            },
+            "totalMonths": {
+              "type": "integer",
+              "description": "Total number of months covered in the analysis"
+            }
+          }
+        },
+        "confidenceScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence level in the analysis results (0-1)"
+        },
+        "currencyUsed": {
+          "type": "string",
+          "description": "Currency used in the statements (e.g., SAR)"
+        }
+      }
+    },
+    "financialAnalysis": {
+      "type": "object",
+      "required": ["incomeStatement", "balanceSheet", "cashFlowStatement", "financialRatios", "trendAnalysis"],
+      "properties": {
+        "incomeStatement": {
+          "type": "object",
+          "required": ["revenue", "costOfGoodsSold", "grossProfit", "operatingExpenses", "operatingIncome", "netIncome", "zakatExpense"],
+          "properties": {
+            "revenue": {
+              "type": "object",
+              "required": ["total", "breakdown"],
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "description": "Total revenue for the period"
+                },
+                "breakdown": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["category", "amount", "percentage"],
+                    "properties": {
+                      "category": {
+                        "type": "string",
+                        "description": "Revenue category or stream"
+                      },
+                      "amount": {
+                        "type": "number",
+                        "description": "Amount in currency"
+                      },
+                      "percentage": {
+                        "type": "number",
+                        "description": "Percentage of total revenue"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "costOfGoodsSold": {
+              "type": "number",
+              "description": "Total cost of goods sold"
+            },
+            "grossProfit": {
+              "type": "number",
+              "description": "Gross profit (revenue - COGS)"
+            },
+            "operatingExpenses": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "number",
+                  "description": "Total operating expenses"
+                },
+                "breakdown": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["category", "amount"],
+                    "properties": {
+                      "category": {
+                        "type": "string",
+                        "description": "Expense category"
+                      },
+                      "amount": {
+                        "type": "number",
+                        "description": "Amount in currency"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "operatingIncome": {
+              "type": "number",
+              "description": "Operating income (gross profit - operating expenses)"
+            },
+            "netIncome": {
+              "type": "number",
+              "description": "Net income after taxes and interest"
+            },
+            "zakatExpense": {
+              "type": "number",
+              "description": "Zakat expense for the period"
+            }
+          }
+        },
+        "balanceSheet": {
+          "type": "object",
+          "required": ["assets", "liabilities", "equity"],
+          "properties": {
+            "assets": {
+              "type": "object",
+              "required": ["totalAssets", "currentAssets", "nonCurrentAssets"],
+              "properties": {
+                "totalAssets": {
+                  "type": "number",
+                  "description": "Total assets"
+                },
+                "currentAssets": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "number",
+                      "description": "Total current assets"
+                    },
+                    "cash": {
+                      "type": "number",
+                      "description": "Cash and cash equivalents"
+                    },
+                    "accountsReceivable": {
+                      "type": "number",
+                      "description": "Accounts receivable"
+                    },
+                    "inventory": {
+                      "type": "number",
+                      "description": "Inventory"
+                    },
+                    "otherCurrentAssets": {
+                      "type": "number",
+                      "description": "Other current assets"
+                    }
+                  }
+                },
+                "nonCurrentAssets": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "number",
+                      "description": "Total non-current assets"
+                    },
+                    "propertyPlantEquipment": {
+                      "type": "number",
+                      "description": "Property, plant, and equipment"
+                    },
+                    "intangibleAssets": {
+                      "type": "number",
+                      "description": "Intangible assets"
+                    },
+                    "investments": {
+                      "type": "number",
+                      "description": "Long-term investments"
+                    },
+                    "otherNonCurrentAssets": {
+                      "type": "number",
+                      "description": "Other non-current assets"
+                    }
+                  }
+                }
+              }
+            },
+            "liabilities": {
+              "type": "object",
+              "required": ["totalLiabilities", "currentLiabilities", "nonCurrentLiabilities"],
+              "properties": {
+                "totalLiabilities": {
+                  "type": "number",
+                  "description": "Total liabilities"
+                },
+                "currentLiabilities": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "number",
+                      "description": "Total current liabilities"
+                    },
+                    "accountsPayable": {
+                      "type": "number",
+                      "description": "Accounts payable"
+                    },
+                    "shortTermDebt": {
+                      "type": "number",
+                      "description": "Short-term debt"
+                    },
+                    "otherCurrentLiabilities": {
+                      "type": "number",
+                      "description": "Other current liabilities"
+                    },
+                    "zakatPayable": {
+                      "type": "number",
+                      "description": "Current zakat payable"
+                    }
+                  }
+                },
+                "nonCurrentLiabilities": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "number",
+                      "description": "Total non-current liabilities"
+                    },
+                    "longTermDebt": {
+                      "type": "number",
+                      "description": "Long-term debt"
+                    },
+                    "otherNonCurrentLiabilities": {
+                      "type": "number",
+                      "description": "Other non-current liabilities"
+                    }
+                  }
+                }
+              }
+            },
+            "equity": {
+              "type": "object",
+              "required": ["totalEquity"],
+              "properties": {
+                "totalEquity": {
+                  "type": "number",
+                  "description": "Total shareholders' equity"
+                },
+                "commonStock": {
+                  "type": "number",
+                  "description": "Common stock"
+                },
+                "retainedEarnings": {
+                  "type": "number",
+                  "description": "Retained earnings"
+                },
+                "otherEquity": {
+                  "type": "number",
+                  "description": "Other equity components"
+                }
+              }
+            }
+          }
+        },
+        "cashFlowStatement": {
+          "type": "object",
+          "required": ["operatingActivities", "investingActivities", "financingActivities", "netCashFlow"],
+          "properties": {
+            "operatingActivities": {
+              "type": "number",
+              "description": "Net cash from operating activities"
+            },
+            "investingActivities": {
+              "type": "number",
+              "description": "Net cash from investing activities"
+            },
+            "financingActivities": {
+              "type": "number",
+              "description": "Net cash from financing activities"
+            },
+            "netCashFlow": {
+              "type": "number",
+              "description": "Net increase/decrease in cash"
+            }
+          }
+        },
+        "financialRatios": {
+          "type": "object",
+          "required": ["profitabilityRatios", "liquidityRatios", "solvencyRatios", "efficiencyRatios"],
+          "properties": {
+            "profitabilityRatios": {
+              "type": "object",
+              "properties": {
+                "grossProfitMargin": {
+                  "type": "number",
+                  "description": "Gross profit margin"
+                },
+                "operatingProfitMargin": {
+                  "type": "number",
+                  "description": "Operating profit margin"
+                },
+                "netProfitMargin": {
+                  "type": "number",
+                  "description": "Net profit margin"
+                },
+                "returnOnAssets": {
+                  "type": "number",
+                  "description": "Return on assets (ROA)"
+                },
+                "returnOnEquity": {
+                  "type": "number",
+                  "description": "Return on equity (ROE)"
+                },
+                "returnOnInvestedCapital": {
+                  "type": "number",
+                  "description": "Return on invested capital (ROIC)"
+                }
+              }
+            },
+            "liquidityRatios": {
+              "type": "object",
+              "properties": {
+                "currentRatio": {
+                  "type": "number",
+                  "description": "Current ratio"
+                },
+                "quickRatio": {
+                  "type": "number",
+                  "description": "Quick ratio (Acid-test ratio)"
+                },
+                "cashRatio": {
+                  "type": "number",
+                  "description": "Cash ratio"
+                },
+                "operatingCashFlowRatio": {
+                  "type": "number",
+                  "description": "Operating cash flow ratio"
+                }
+              }
+            },
+            "solvencyRatios": {
+              "type": "object",
+              "properties": {
+                "debtToEquityRatio": {
+                  "type": "number",
+                  "description": "Debt-to-equity ratio"
+                },
+                "debtToAssetsRatio": {
+                  "type": "number",
+                  "description": "Debt-to-assets ratio"
+                },
+                "interestCoverageRatio": {
+                  "type": "number",
+                  "description": "Interest coverage ratio"
+                },
+                "debtServiceCoverageRatio": {
+                  "type": "number",
+                  "description": "Debt service coverage ratio"
+                }
+              }
+            },
+            "efficiencyRatios": {
+              "type": "object",
+              "properties": {
+                "assetTurnover": {
+                  "type": "number",
+                  "description": "Asset turnover ratio"
+                },
+                "inventoryTurnover": {
+                  "type": "number",
+                  "description": "Inventory turnover ratio"
+                },
+                "receivablesTurnover": {
+                  "type": "number",
+                  "description": "Receivables turnover ratio"
+                },
+                "payablesTurnover": {
+                  "type": "number",
+                  "description": "Payables turnover ratio"
+                },
+                "cashConversionCycle": {
+                  "type": "number",
+                  "description": "Cash conversion cycle (days)"
+                }
+              }
+            }
+          }
+        },
+        "trendAnalysis": {
+          "type": "object",
+          "properties": {
+            "revenueGrowth": {
+              "type": "number",
+              "description": "Year-over-year revenue growth rate"
+            },
+            "profitGrowth": {
+              "type": "number",
+              "description": "Year-over-year profit growth rate"
+            },
+            "assetGrowth": {
+              "type": "number",
+              "description": "Year-over-year asset growth rate"
+            },
+            "debtGrowth": {
+              "type": "number",
+              "description": "Year-over-year debt growth rate"
+            },
+            "seasonalPatterns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "period": {
+                    "type": "string",
+                    "description": "Time period (e.g., 'Q1', 'Summer')"
+                  },
+                  "observation": {
+                    "type": "string",
+                    "description": "Observed pattern"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "zakatAndTaxes": {
+          "type": "object",
+          "required": ["zakatProvision", "zakatPayable", "zakatBase", "zakatRate", "zakatCalculation"],
+          "properties": {
+            "zakatProvision": {
+              "type": "number",
+              "description": "Provision for zakat"
+            },
+            "zakatPayable": {
+              "type": "number",
+              "description": "Current zakat payable"
+            },
+            "zakatBase": {
+              "type": "object",
+              "required": ["netIncome", "additions", "deductions", "totalBase"],
+              "properties": {
+                "netIncome": {
+                  "type": "number",
+                  "description": "Net income before zakat adjustments"
+                },
+                "additions": {
+                  "type": "number",
+                  "description": "Additions to zakat base"
+                },
+                "deductions": {
+                  "type": "number",
+                  "description": "Deductions from zakat base"
+                },
+                "totalBase": {
+                  "type": "number",
+                  "description": "Total zakat base"
+                }
+              }
+            },
+            "zakatRate": {
+              "type": "number",
+              "description": "Zakat rate (typically 2.5%)"
+            },
+            "zakatCalculation": {
+              "type": "object",
+              "required": ["currentYearZakat", "previousYearZakat", "zakatMovement"],
+              "properties": {
+                "currentYearZakat": {
+                  "type": "number",
+                  "description": "Zakat for current year"
+                },
+                "previousYearZakat": {
+                  "type": "number",
+                  "description": "Zakat for previous year"
+                },
+                "zakatMovement": {
+                  "type": "object",
+                  "required": ["openingBalance", "currentYearProvision", "payments", "closingBalance"],
+                  "properties": {
+                    "openingBalance": {
+                      "type": "number",
+                      "description": "Opening balance of zakat provision"
+                    },
+                    "currentYearProvision": {
+                      "type": "number",
+                      "description": "Provision made during the year"
+                    },
+                    "payments": {
+                      "type": "number",
+                      "description": "Payments made during the year"
+                    },
+                    "closingBalance": {
+                      "type": "number",
+                      "description": "Closing balance of zakat provision"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "creditAssessment": {
+      "type": "object",
+      "required": ["creditworthiness", "riskFactors", "debtServiceCapacity", "recommendation"],
+      "properties": {
+        "creditworthiness": {
+          "type": "object",
+          "required": ["overallScore", "scoreBreakdown"],
+          "properties": {
+            "overallScore": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Overall creditworthiness score (0-100)"
+            },
+            "scoreBreakdown": {
+              "type": "object",
+              "properties": {
+                "financialHealth": {
+                  "type": "number",
+                  "description": "Score based on financial health"
+                },
+                "paymentHistory": {
+                  "type": "number",
+                  "description": "Score based on payment history if available"
+                },
+                "businessStability": {
+                  "type": "number",
+                  "description": "Score based on business stability"
+                },
+                "industryOutlook": {
+                  "type": "number",
+                  "description": "Score based on industry outlook"
+                }
+              }
+            }
+          }
+        },
+        "riskFactors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["factor", "severity", "description"],
+            "properties": {
+              "factor": {
+                "type": "string",
+                "description": "Risk factor identified"
+              },
+              "severity": {
+                "type": "string",
+                "enum": ["Low", "Medium", "High", "Critical"],
+                "description": "Severity of the risk factor"
+              },
+              "description": {
+                "type": "string",
+                "description": "Detailed description of the risk factor"
+              }
+            }
+          }
+        },
+        "debtServiceCapacity": {
+          "type": "object",
+          "required": ["maxSustainableDebt", "recommendedLoanAmount", "recommendedTermMonths"],
+          "properties": {
+            "maxSustainableDebt": {
+              "type": "number",
+              "description": "Maximum sustainable debt based on financial analysis"
+            },
+            "recommendedLoanAmount": {
+              "type": "number",
+              "description": "Recommended loan amount"
+            },
+            "recommendedTermMonths": {
+              "type": "integer",
+              "description": "Recommended loan term in months"
+            },
+            "debtServiceCoverageProjection": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "period": {
+                    "type": "string",
+                    "description": "Future time period"
+                  },
+                  "projectedDSCR": {
+                    "type": "number",
+                    "description": "Projected debt service coverage ratio"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "recommendation": {
+          "type": "object",
+          "required": ["decision", "confidenceLevel", "justification"],
+          "properties": {
+            "decision": {
+              "type": "string",
+              "enum": ["Approve", "Conditionally Approve", "Decline", "Need More Information"],
+              "description": "Credit decision recommendation"
+            },
+            "confidenceLevel": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence in the recommendation (0-1)"
+            },
+            "justification": {
+              "type": "string",
+              "description": "Detailed justification for the recommendation"
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Conditions for approval if conditionally approved"
+              }
+            }
+          }
+        }
+      }
+    },
+    "industryComparison": {
+      "type": "object",
+      "properties": {
+        "industryBenchmarks": {
+          "type": "object",
+          "properties": {
+            "profitMargin": {
+              "type": "object",
+              "properties": {
+                "industryAverage": {
+                  "type": "number",
+                  "description": "Industry average profit margin"
+                },
+                "companyVsIndustry": {
+                  "type": "number",
+                  "description": "Difference between company and industry average"
+                }
+              }
+            },
+            "liquidityRatios": {
+              "type": "object",
+              "properties": {
+                "industryAverage": {
+                  "type": "number",
+                  "description": "Industry average current ratio"
+                },
+                "companyVsIndustry": {
+                  "type": "number",
+                  "description": "Difference between company and industry average"
+                }
+              }
+            },
+            "debtRatios": {
+              "type": "object",
+              "properties": {
+                "industryAverage": {
+                  "type": "number",
+                  "description": "Industry average debt-to-equity ratio"
+                },
+                "companyVsIndustry": {
+                  "type": "number",
+                  "description": "Difference between company and industry average"
+                }
+              }
+            }
+          }
+        },
+        "competitivePosition": {
+          "type": "string",
+          "description": "Assessment of company's competitive position in the industry"
+        }
+      }
+    },
+    "forecastAndProjections": {
+      "type": "object",
+      "properties": {
+        "revenueProjection": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "period": {
+                "type": "string",
+                "description": "Future time period"
+              },
+              "projectedRevenue": {
+                "type": "number",
+                "description": "Projected revenue for the period"
+              }
+            }
+          }
+        },
+        "cashFlowProjection": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "period": {
+                "type": "string",
+                "description": "Future time period"
+              },
+              "projectedCashFlow": {
+                "type": "number",
+                "description": "Projected cash flow for the period"
+              }
+            }
+          }
+        },
+        "breakEvenAnalysis": {
+          "type": "object",
+          "properties": {
+            "breakEvenPoint": {
+              "type": "number",
+              "description": "Break-even point in revenue"
+            },
+            "timeToBreakEven": {
+              "type": "string",
+              "description": "Estimated time to reach break-even"
+            }
+          }
+        }
+      }
+    },
+    "anomaliesAndRedFlags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "description", "severity", "recommendation"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Category of anomaly or red flag"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the anomaly"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["Low", "Medium", "High", "Critical"],
+            "description": "Severity of the anomaly"
+          },
+          "recommendation": {
+            "type": "string",
+            "description": "Recommended action to address the anomaly"
+          }
+        }
+      }
+    }
+  }
+}

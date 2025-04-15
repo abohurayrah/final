@@ -1,0 +1,74 @@
+{
+  "contract_analysis": {
+    "overview": {
+      "document_sources": [
+        "ac.pdf"
+      ],
+      "total_contracts_analyzed": 1
+    },
+    "contracts_summary": [
+      {
+        "contract_type": "Main Contractor Agreement",
+        "counterparty": "\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0648\u0627\u0644\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629 (Al Awaly Real Estate Company)",
+        "contract_date": "05/11/2024 ( \u0627\u0644\u0645\u0648\u0627\u0641\u0642 1446/05/03 \u0647\u0640 ) [Source: ac.pdf, Page 2]",
+        "contract_value_sar": 33482700.0,
+        "contract_duration": "24 Calendar Months (including 30 days mobilization) [Source: ac.pdf, Page 14]",
+        "payment_terms": "20% Advance Payment against Promissory Note [Source: ac.pdf, Page 12], Monthly interim payments based on approved work progress [Source: ac.pdf, Page 12], less 10% retention [Source: ac.pdf, Page 5, 12]. Payment within 20 working days of Owner receiving approved documents [Source: ac.pdf, Page 13]. Retention release: 50% at Preliminary Acceptance, 50% at Final Acceptance [Source: ac.pdf, Page 13]. Up to 70% payment for approved materials on site [Source: ac.pdf, Page 12].",
+        "key_obligations": [
+          "Execute and complete the construction of a residential tower (4 basements + G + 25 Typical + Annex) as per specifications, drawings, and contract documents [Source: ac.pdf, Page 2, 11].",
+          "Provide labor, materials, equipment, and site management [Source: ac.pdf, Page 5, 6].",
+          "Adhere to project schedule and quality standards [Source: ac.pdf, Page 10, 15].",
+          "Comply with safety, health, and environmental regulations [Source: ac.pdf, Page 8].",
+          "Obtain necessary permits (Contractor cost) and pay temporary utility connection fees [Source: ac.pdf, Page 6].",
+          "Provide required insurances (All Risks, Third Party, Workmen Comp) [Source: ac.pdf, Page 11].",
+          "Submit work programs, progress reports, shop drawings, material submittals [Source: ac.pdf, Page 9, 10, 17].",
+          "Rectify defects during the 365-day Defects Liability Period [Source: ac.pdf, Page 14, 15].",
+          "Provide specified guarantees (Structural - 10 years, others as specified) [Source: ac.pdf, Page 15]."
+        ],
+        "termination_provisions": "Owner may terminate for Contractor default (e.g., delay, non-performance, bankruptcy) with 14-day notice [Source: ac.pdf, Page 21, 24], or for convenience with 30-day notice [Source: ac.pdf, Page 23]. Termination possible for prolonged Force Majeure [Source: ac.pdf, Page 26].",
+        "guarantees_securities": "Advance Payment Guarantee: Promissory Note for 20% of contract value [Source: ac.pdf, Page 12]. Performance Guarantee: 10% retention from interim payments [Source: ac.pdf, Page 5, 12, 13]. Defects Liability Guarantee: Bank Guarantee for Amount Not Specified ('(**) \u0631\u064a\u0627\u0644 \u0633\u0639\u0648\u062f\u064a') for 365 days [Source: ac.pdf, Page 14]. Structural Guarantee (10 years) [Source: ac.pdf, Page 15]."
+      }
+    ],
+    "purchase_orders_summary": [],
+    "revenue_analysis": {
+      "total_contract_value_sar": 33482700.0,
+      "expected_monthly_revenue_sar": null,
+      "customer_concentration": {
+        "top_customer": "\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0648\u0627\u0644\u064a \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629 (Al Awaly Real Estate Company) [Source: ac.pdf, Page 2]",
+        "top_customer_percentage": 100.0,
+        "concentration_risk": "High (Based solely on the single provided contract document) [Source: Calculation based on ac.pdf]"
+      },
+      "revenue_predictability": "Moderate. Based on a large, fixed-price (approximate, per sq m basis [Source: ac.pdf, Page 4]) contract over 24 months [Source: ac.pdf, Page 14]. Dependent on project execution progress, timely approvals, and absence of major delays or disputes. Potential for variation orders exists (up to 25% change allowed [Source: ac.pdf, Page 19]). Monthly revenue varies based on work progress (S-Curve), not linear."
+    },
+    "working_capital_assessment": {
+      "payment_terms_analysis": "The 20% advance payment (SAR 6,696,540) [Source: Calculation based on ac.pdf, Page 4, 12] provides initial liquidity. However, the 10% retention (totaling SAR 3,348,270) [Source: Calculation based on ac.pdf, Page 4, 5] withheld until project milestones (PAC/FAC) creates significant working capital pressure. Monthly payments occur after work completion and invoice approval (within 20 working days) [Source: ac.pdf, Page 13], requiring the contractor to finance operations during this lag.",
+      "cash_flow_implications": "Significant working capital is required to fund monthly operating expenses (labor, materials, subcontractors, overheads) before progress payments are received. The 10% retention significantly impacts cumulative cash flow throughout the project. Delays in invoice approvals or payments by the client/consultant would further strain cash flow. Upfront costs for mobilization, guarantees, and insurance also require funding.",
+      "working_capital_needs": "The contract structure necessitates substantial working capital to manage the gap between expenditures and income, particularly due to the retention mechanism and payment cycle timing. The requested loan amount appears consistent with the needs arising from a contract of this scale and its payment terms."
+    },
+    "loan_alignment": {
+      "loan_purpose_alignment": "Strong. The SAR 1.5m loan request for working capital directly addresses the cash flow requirements identified in the contract analysis, needed to fund operations between payment cycles and manage the impact of retention.",
+      "repayment_timeline_alignment": "Feasible. The 6-month loan term aligns with the initial phases of the 24-month contract [Source: ac.pdf, Page 14]. Repayment capacity exists from the initial advance payment [Source: ac.pdf, Page 12] and subsequent monthly progress payments, assuming timely project execution and payment receipts. The average monthly billing potential (approx. SAR 1.4M before retention) [Source: Calculation based on ac.pdf, Page 4, 14] supports servicing the loan within the term.",
+      "overall_alignment_assessment": "Good. The loan request aligns logically with the financial demands derived directly from the analyzed contract's terms and scale."
+    },
+    "risks_and_strengths": {
+      "contractual_strengths": [
+        "Substantial Contract Value (SAR 33.48M) offering significant revenue [Source: ac.pdf, Page 4].",
+        "Clear Project Scope defined [Source: ac.pdf, Page 2].",
+        "Established Counterparty (Al Awaly Real Estate, SAR 200M Capital) [Source: ac.pdf, Page 1, 2].",
+        "20% Advance Payment provides initial funding [Source: ac.pdf, Page 12].",
+        "Defined Monthly Progress Payment mechanism [Source: ac.pdf, Page 12]."
+      ],
+      "contractual_risks": [
+        "High Customer Concentration (100% based on provided document) [Source: Calculation based on ac.pdf].",
+        "Significant Cash Flow pressure from 10% Retention until late project stages [Source: ac.pdf, Page 5, 12, 13].",
+        "Payment Timing Risk: Dependency on timely approvals and payments from Owner/Consultant [Source: ac.pdf, Page 13].",
+        "Cost Overrun Risk: Contractor bears risk of price increases for labor/materials during the contract period [Source: ac.pdf, Page 4].",
+        "Project Delay Risk: Potential for delays impacting revenue and incurring penalties (SAR 40,000/day, max 10% of contract value) [Source: ac.pdf, Page 16].",
+        "Strict Termination Clauses for contractor default [Source: ac.pdf, Page 21, 23, 24].",
+        "Requirement for Bank Guarantees (Defects Liability) imposes costs and requires banking facilities [Source: ac.pdf, Page 14].",
+        "Liability for defects for 365 days post-completion [Source: ac.pdf, Page 14]."
+      ],
+      "risk_level": "Moderate to High (based solely on provided document). Key risks relate to cash flow management due to retention, single contract dependency, and inherent construction project execution risks."
+    }
+  }
+}

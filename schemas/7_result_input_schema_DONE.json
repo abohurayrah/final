@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Final Result Input Aggregation",
+  "description": "Combines the outputs from Bank, Financial, Other Docs, and Dynamo steps.",
+  "type": "object",
+  "required": [
+    "generalInput",
+    "bankAnalysisOutput",
+    "financialAnalysisOutput",
+    "otherDocumentsOutput",
+    "decisionDynamoOutput"
+  ],
+  "properties": {
+    "generalInput": {
+      "$ref": "1_general_input_schema_DONE.json",
+      "description": "The initial input data provided by the user."
+    },
+    "bankAnalysisOutput": {
+      "$ref": "2_bank_output_schema_DONE.json",
+      "description": "The complete output from the Bank Statement Analysis step."
+    },
+    "financialAnalysisOutput": {
+      "$ref": "3_fin_output_schema_DONE.json",
+      "description": "The complete output from the Financial Statement Analysis step."
+    },
+    "otherDocumentsOutput": {
+      "$ref": "4_other_output_schema_DONE.json",
+      "description": "The complete output from the Other Documents (VAT/Misc) Analysis step."
+    },
+    "decisionDynamoOutput": {
+      "$ref": "6_dynamo_output_schema_DONE.json",
+      "description": "The complete output from the Decision Dynamo scoring step."
+    }
+  }
+}

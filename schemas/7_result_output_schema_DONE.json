@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Final Decision Report",
+  "description": "Final decision report consolidating all analyses and scores.",
+  "type": "object",
+  "required": [
+    "reportMetadata", 
+    "companySummary", 
+    "analysisSummaries", 
+    "decisionDynamoResult", 
+    "finalRecommendation", 
+    "identifiedRisks"
+  ],
+  "properties": {
+    "reportMetadata": {
+      "type": "object",
+      "required": ["reportGeneratedDate", "modelVersion"],
+      "properties": {
+        "reportGeneratedDate": { "type": "string", "format": "date-time" },
+        "modelVersion": { "type": "string", "description": "Version of the Decision Dynamo model used" },
+        "overallConfidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "companySummary": {
+      "type": "object",
+      "required": ["companyName", "crNumber", "reportedRevenue", "mtcType", "nicheType"],
+      "properties": {
+        "companyName": { "type": "string" },
+        "crNumber": { "type": "number" },
+        "reportedRevenue": { "type": "number" },
+        "mtcType": { "type": "string", "enum": ["m", "t", "c"] },
+        "nicheType": { "type": "string", "enum": ["co", "ni", "na"] },
+        "yearsInBusiness": { "type": "integer" },
+        "yearOfEstablishment": { "type": "integer" },
+        "amountRequested": { "type": "number" },
+        "durationNeeded": { "type": "integer" }
+      }
+    },
+    "analysisSummaries": {
+      "type": "object",
+      "properties": {
+        "bankStatementSummary": { "type": "string", "description": "Concise summary of bank statement analysis findings." },
+        "financialStatementSummary": { "type": "string", "description": "Concise summary of financial statement analysis findings (incl. Zakat)." },
+        "vatAnalysisSummary": { "type": "string", "description": "Concise summary of VAT analysis findings." },
+        "otherDocumentsSummary": { "type": "string", "description": "Summary of findings from other documents." }
+      }
+    },
+    "decisionDynamoResult": {
+      "type": "object",
+      "description": "Key results from Decision Dynamo",
+      "properties": {
+         "final_score_adjusted": { "type": "number" },
+         "recommendation": { "type": "string", "enum": ["Accept", "Reject", "Review"] }
+      },
+      "required": ["final_score_adjusted", "recommendation"]
+    },
+    "finalRecommendation": {
+      "type": "object",
+      "required": ["decision", "rationale"],
+      "properties": {
+        "decision": { "type": "string", "enum": ["Accept", "Reject", "Review"] },
+        "rationale": { "type": "string", "description": "Justification for the final recommendation." },
+        "suggestedConditions": {
+           "type": "array",
+           "items": { "type": "string" },
+           "description": "Any conditions suggested if decision is 'Review' or 'Conditionally Approve'."
+        }
+      }
+    },
+    "identifiedRisks": {
+      "type": "array",
+      "description": "Consolidated list of key risks identified across all analyses.",
+      "items": {
+        "type": "object",
+        "required": ["sourceAnalysis", "riskDescription", "severity"],
+        "properties": {
+          "sourceAnalysis": { "type": "string", "enum": ["Bank", "Financial", "VAT", "Other", "Dynamo"] },
+          "riskDescription": { "type": "string" },
+          "severity": { "type": "string", "enum": ["Low", "Medium", "High", "Critical"] }
+        }
+      }
+    },
+    "changelog": {
+       "type": "array",
+       "description": "History of changes if documents were updated (optional).",
+       "items": {
+          "type": "object",
+          "properties": {
+             "timestamp": { "type": "string", "format": "date-time" },
+             "changeDescription": { "type": "string" },
+             "impactSummary": { "type": "string" }
+          }
+       }
+    }
+  }
+} 
